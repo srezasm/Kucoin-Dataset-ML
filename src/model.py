@@ -1,3 +1,7 @@
+# The code in this module is adapted from the ElliotVilhelm/RNN-Trading
+# with modifications made to suit the specific needs of this project.
+# https://github.com/ElliotVilhelm/RNN-Trading
+
 from keras import Sequential
 from keras.layers import SimpleRNN, Dense, Dropout, LSTM, BatchNormalization, Input, Reshape
 
@@ -24,7 +28,6 @@ def build_model() -> Sequential:
     model.add(Dense(64, activation='tanh'))
     model.add(Dropout(0.1))
 
-    # model.add(Dense(2, activation=keras.activations.relu(alpha=10e-4)))
     model.add(Dense(2, activation='softmax'))
 
     model.compile(
