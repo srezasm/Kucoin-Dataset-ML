@@ -25,4 +25,3 @@ pip-selfcheck.json
 
 # custom ingorations
 __pycache__
-cache
