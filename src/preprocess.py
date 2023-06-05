@@ -64,10 +64,6 @@ def create_features(csv_file):
         is_bes = is_bearish_evening_star(*data[i, [0, 3, 2, 1]],
                                          *data[i-1, [0, 3, 1]])
         X.append(np.append(data[i], [is_bms, is_bes]))
-        if is_bms == 1:
-            print('bms', X[-1], y[-1])
-        if is_bes == 1:
-            print('bes' ,X[-1], y[-1])
         
         if data[i+1][0] > data[i][0]:
             y.append(1)  # ascending

@@ -18,3 +18,7 @@ class Config:
     @property
     def model_path(self):
         return os.path.join(self.cache_dir, os.path.splitext(self.csv_file)[0] + '_model.h5')
+
+    @property
+    def history_path(self):
+        return os.path.join(self.cache_dir, os.path.splitext(self.csv_file)[0] + '_history.txt')
