@@ -7,7 +7,7 @@ from config import Config
 
 
 def train(X_train, X_test, y_train, y_test):
-    model = build_model()
+    model = build_model(X_train.shape[1])
 
     # Train the model
     model.fit(X_train, y_train, epochs=50, batch_size=32)

@@ -6,11 +6,11 @@ from keras import Sequential
 from keras.layers import SimpleRNN, Dense, Dropout, LSTM, BatchNormalization, Input, Reshape
 
 
-def build_model() -> Sequential:
+def build_model(dim) -> Sequential:
     model = Sequential()
 
-    model.add(Input(shape=(4, )))
-    model.add(Reshape((4, 1)))
+    model.add(Input(shape=(dim, )))
+    model.add(Reshape((dim, 1)))
     model.add(BatchNormalization())
 
     model.add(LSTM(256, return_sequences=True))
